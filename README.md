@@ -1,12 +1,108 @@
 Graph Theory Project - Maximizing Edge Weight Distribution
 ======================================================================
-
+A problem of Dr. Chen from the CSIS department institutes this project with a collaborator 
+Dr.Goyt from the MATH department. This project aimed to use technology to find a general
+solution to the optimization problem of finding the maximum graph value for any given graph.
+See REPORT from 12wk folder for more on project information.
 Contents
 ======================================================================
+01wk_2024-09-03
+  .2024-09-03-project-1.sage-0.term
+  2024-09-03-project-1.sage
+  2024-09-03-project-1.sage.py
+  graph.png
+  K4.png
+  Pete.png
+  xtraEdge.png
+  xtraEdge2.png
+02wk_2024-09-10
+  __pycache__
+    weightedGraph.cpython-312.pyc
+  .2024-09-10-file-2.sage-0.term
+  .2024-09-10-file-2.tex.syncdb
+  .2024-09-14-file-2-TEST.sage-0.term
+  .notes.tex.syncdb
+  .TEST.sage-0.term
+  .weightedGraph.sage-0.term
+  notes.pdf
+  notes.tex
+  TEST.sage
+  TEST.sage.py
+  week2G1.png
+  week2G2.png
+  week2G3.png
+  weightedGraph.sage
+  weightedGraph.sage.py
+03wk_2024-09-18
+  .2024-09-21-file-1.tex.syncdb
+  .proofs.tex.syncdb
+  .test2.sage-0.term
+  .weightedGraphs2.sage-0.term
+  proofs.pdf
+  proofs.tex
+  test2.sage
+  test2.sage.py
+  week3G1.png
+  week3G2.png
+  weightedGraphs2.sage
+04wk_2024-09-24
+  .proofs revised.tex.syncdb
+  .test2.sage-0.term
+  proofs revised.pdf
+  proofs revised.tex
+  test2.sage
+  test2.sage.py
+  week3G1.png
+  week3G2.png
+  weightedGraphs2.sage
 05wk_2024-10-01
-test2.sage
-weightedGraphs2.sage
-
+  test2.sage
+  weightedGraphs2.sage
+06wk_2024-10-08
+  .2024-10-15-file-1.tex.syncdb
+  .proofs.tex.syncdb
+  .test2.sage-0.term
+  .test2.sage-1.term
+  proofs.pdf
+  proofs.tex
+  terminal_output.tex
+  test2.sage
+  test2.sage.py
+  week3G1.png
+  week3G2.png
+  weightedGraphs2.sage
+07wk_2024-10-15
+  .test3.sage-0.term
+  test3.sage
+  test3.sage.py
+  weightedGraphs3.sage
+08wk_2024-10-22
+  .test4.sage-0.term
+  test4.sage
+  test4.sage.py
+  weightedGraphs4.sage
+  weightedGraphs4b.sage
+09wk_2024-10-29
+  .proofs.tex.syncdb
+  .test4.sage-0.term
+  proofs.pdf
+  proofs.tex
+  test4.sage
+  test4.sage.py
+10wk_2024-11-05
+  .test5.sage-0.term
+  test5.sage
+  test5.sage.py
 11wk_2024-11-14
-test5.sage
-test6.sage
+  test5.sage
+  test6.sage
+12wk_2024-11-19(REPORT)
+  .2024-11-20-file-1.tex.syncdb
+  2024-11-20-file-1.pdf
+  2024-11-20-file-1.tex
+  f1.1.JPG
+  f2.1.JPG
+  f2.11.JPG
+  f3.1.JPG
+  f3.11.JPG
+  f4.1.JPG
