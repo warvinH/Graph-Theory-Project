@@ -1,0 +1,289 @@
+
+Graph 1:
+Weight: 1
+Enter a weight: 10
+Weight: 2
+Enter a weight: 1
+Weight: 3
+Enter a weight: 2
+Weight: 4
+Enter a weight: 6
+Weight: 5
+Enter a weight: 9
+Weight: 6
+Enter a weight: 3
+Weight: 7
+Enter a weight: 4
+Weight: 8
+Enter a weight: 8
+Weight: 9
+Enter a weight: 5
+Weight: 10
+Enter a weight: 7
+weights assigned.
+
+weights -> {(1, 2, None): 10, (1, 3, None): 1, (1, 4, None): 2, (1, 5, None): 6, (2, 3, None): 9, (2, 4, None): 3, (2, 5, None): 4, (3, 4, None): 8, (3, 5, None): 5, (4, 5, None): 7}
+
+[ 4 -1 -1 -1 -1]
+[-1  4 -1 -1 -1]
+[-1 -1  4 -1 -1]
+[-1 -1 -1  4 -1]
+[-1 -1 -1 -1  4]
+#SpanningTs:  125
+Edge weights: [10, 1, 2, 6, 9, 3, 4, 8, 5, 7]
+Products of edge weights for each spanning tree: [840, 1344, 960, 630, 1008, 720, 360, 576, 1890, 3024, 2160, 1512, 1728, 1134, 810, 648, 280, 448, 320, 210, 336, 240, 120, 192, 630, 1008, 720, 504, 576, 378, 270, 216, 240, 384, 180, 288, 540, 864, 432, 324, 140, 224, 160, 105, 168, 120, 60, 96, 315, 504, 360, 252, 288, 189, 135, 108, 168, 192, 126, 144, 72, 378, 432, 162, 56, 40, 42, 30, 24, 126, 90, 72, 48, 36, 108, 1400, 2240, 1600, 1050, 1680, 1200, 600, 960, 3150, 5040, 3600, 2520, 2880, 1890, 1350, 1080, 2100, 3360, 2400, 900, 1440, 3780, 4320, 1620, 700, 1120, 800, 400, 640, 1260, 900, 720, 600, 960, 1080, 350, 560, 400, 280, 320, 210, 150, 120, 420, 480, 180, 140, 100, 80, 120]
+Sum of the products: 99864
+
+Graph 2:
+Weight: 1
+Enter a weight: 9
+Weight: 2
+Enter a weight: 1
+Weight: 3
+Enter a weight: 2
+Weight: 4
+Enter a weight: 7
+Weight: 5
+Enter a weight: 6
+Weight: 6
+Enter a weight: 3
+Weight: 7
+Enter a weight: 4
+Weight: 8
+Enter a weight: 10
+Weight: 9
+Enter a weight: 5
+Weight: 10
+Enter a weight: 8
+weights assigned.
+
+weights -> {(1, 2, None): 9, (1, 3, None): 1, (1, 4, None): 2, (1, 5, None): 7, (2, 3, None): 6, (2, 4, None): 3, (2, 5, None): 4, (3, 4, None): 10, (3, 5, None): 5, (4, 5, None): 8}
+
+[ 4 -1 -1 -1 -1]
+[-1  4 -1 -1 -1]
+[-1 -1  4 -1 -1]
+[-1 -1 -1  4 -1]
+[-1 -1 -1 -1  4]
+#SpanningTs:  125
+Edge weights: [9, 1, 2, 7, 6, 3, 4, 10, 5, 8]
+Products of edge weights for each spanning tree: [1120, 2240, 1400, 840, 1680, 1050, 420, 840, 1680, 3360, 2100, 1344, 1680, 1008, 630, 504, 320, 640, 400, 240, 480, 300, 120, 240, 480, 960, 600, 384, 480, 288, 180, 144, 280, 560, 210, 420, 420, 840, 336, 252, 160, 320, 200, 120, 240, 150, 60, 120, 240, 480, 300, 192, 240, 144, 90, 72, 224, 280, 168, 210, 84, 336, 420, 126, 64, 40, 48, 30, 24, 96, 60, 48, 56, 42, 84, 1440, 2880, 1800, 1080, 2160, 1350, 540, 1080, 2160, 4320, 2700, 1728, 2160, 1296, 810, 648, 2520, 5040, 3150, 945, 1890, 3024, 3780, 1134, 720, 1440, 900, 360, 720, 864, 540, 432, 630, 1260, 756, 360, 720, 450, 288, 360, 216, 135, 108, 504, 630, 189, 144, 90, 72, 126]
+Sum of the products: 99687
+
+~/week6_2024-10-08$ sage test2.sage
+Graph 1:
+Weight: 1
+Enter a weight: 9
+Weight: 2
+Enter a weight: 1
+Weight: 3
+Enter a weight: 2
+Weight: 4
+Enter a weight: 7
+Weight: 5
+Enter a weight: 6
+Weight: 6
+Enter a weight: 3
+Weight: 7
+Enter a weight: 4
+Weight: 8
+Enter a weight: 10
+Weight: 9
+Enter a weight: 5
+Weight: 10
+Enter a weight: 8
+weights assigned.
+
+weights -> {(1, 2, None): 9, (1, 3, None): 1, (1, 4, None): 2, (1, 5, None): 7, (2, 3, None): 6, (2, 4, None): 3, (2, 5, None): 4, (3, 4, None): 10, (3, 5, None): 5, (4, 5, None): 8}
+
+[ 4 -1 -1 -1 -1]
+[-1  4 -1 -1 -1]
+[-1 -1  4 -1 -1]
+[-1 -1 -1  4 -1]
+[-1 -1 -1 -1  4]
+#SpanningTs:  125
+Edge weights: [9, 1, 2, 7, 6, 3, 4, 10, 5, 8]
+Products of edge weights for each spanning tree: [1120, 2240, 1400, 840, 1680, 1050, 420, 840, 1680, 3360, 2100, 1344, 1680, 1008, 630, 504, 320, 640, 400, 240, 480, 300, 120, 240, 480, 960, 600, 384, 480, 288, 180, 144, 280, 560, 210, 420, 420, 840, 336, 252, 160, 320, 200, 120, 240, 150, 60, 120, 240, 480, 300, 192, 240, 144, 90, 72, 224, 280, 168, 210, 84, 336, 420, 126, 64, 40, 48, 30, 24, 96, 60, 48, 56, 42, 84, 1440, 2880, 1800, 1080, 2160, 1350, 540, 1080, 2160, 4320, 2700, 1728, 2160, 1296, 810, 648, 2520, 5040, 3150, 945, 1890, 3024, 3780, 1134, 720, 1440, 900, 360, 720, 864, 540, 432, 630, 1260, 756, 360, 720, 450, 288, 360, 216, 135, 108, 504, 630, 189, 144, 90, 72, 126]
+Sum of the products: 99687
+
+Graph 2:
+Weight: 1
+Enter a weight: 10
+Weight: 2
+Enter a weight: 1
+Weight: 3
+Enter a weight: 2
+Weight: 4
+Enter a weight: 6
+Weight: 5
+Enter a weight: 9
+Weight: 6
+Enter a weight: 3
+Weight: 7
+Enter a weight: 4
+Weight: 8
+Enter a weight: 8
+Weight: 9
+Enter a weight: 5
+Weight: 10
+Enter a weight: 7
+weights assigned.
+
+weights -> {(1, 2, None): 10, (1, 3, None): 1, (1, 4, None): 2, (1, 5, None): 6, (2, 3, None): 9, (2, 4, None): 3, (2, 5, None): 4, (3, 4, None): 8, (3, 5, None): 5, (4, 5, None): 7}
+
+[ 4 -1 -1 -1 -1]
+[-1  4 -1 -1 -1]
+[-1 -1  4 -1 -1]
+[-1 -1 -1  4 -1]
+[-1 -1 -1 -1  4]
+#SpanningTs:  125
+Edge weights: [10, 1, 2, 6, 9, 3, 4, 8, 5, 7]
+Products of edge weights for each spanning tree: [840, 1344, 960, 630, 1008, 720, 360, 576, 1890, 3024, 2160, 1512, 1728, 1134, 810, 648, 280, 448, 320, 210, 336, 240, 120, 192, 630, 1008, 720, 504, 576, 378, 270, 216, 240, 384, 180, 288, 540, 864, 432, 324, 140, 224, 160, 105, 168, 120, 60, 96, 315, 504, 360, 252, 288, 189, 135, 108, 168, 192, 126, 144, 72, 378, 432, 162, 56, 40, 42, 30, 24, 126, 90, 72, 48, 36, 108, 1400, 2240, 1600, 1050, 1680, 1200, 600, 960, 3150, 5040, 3600, 2520, 2880, 1890, 1350, 1080, 2100, 3360, 2400, 900, 1440, 3780, 4320, 1620, 700, 1120, 800, 400, 640, 1260, 900, 720, 600, 960, 1080, 350, 560, 400, 280, 320, 210, 150, 120, 420, 480, 180, 140, 100, 80, 120]
+Sum of the products: 99864
+
+~/week6_2024-10-08$ sage test2.sage
+Graph 1:
+Weight: 1
+Enter a weight: ~/week6_2024-10-08$ sage test2.sage
+Graph 1:
+Weight: 1
+Enter a weight: 5
+Weight: 2
+Enter a weight: 6
+Weight: 3
+Enter a weight: 4
+Weight: 4
+Enter a weight: 1
+Weight: 5
+Enter a weight: 3
+Weight: 6
+Enter a weight: 2
+weights assigned.
+
+weights -> {(1, 2, None): 5, (1, 4, None): 6, (1, 5, None): 4, (2, 3, None): 1, (3, 4, None): 3, (4, 5, None): 2}
+
+[ 3 -1  0 -1 -1]
+[-1  2 -1  0  0]
+[ 0 -1  2 -1  0]
+[-1  0 -1  3 -1]
+[-1  0  0 -1  2]
+#SpanningTs:  11
+Edge weights: [5, 6, 4, 1, 3, 2]
+Products of edge weights for each spanning tree: [24, 36, 72, 30, 120, 40, 60, 180, 60, 360, 120]
+Sum of the products: 1102
+
+Graph 2:
+Weight: 1
+Enter a weight: Traceback (most recent call last):
+  File "/home/user/week6_2024-10-08/test2.sage.py", line 47, in <module>
+    assign_weights(G2)
+  File "<string>", line 16, in assign_weights
+EOFError
+~/week6_2024-10-08$ sage test2.sage
+Graph 1:
+Weight: 1
+Enter a weight: 4
+Weight: 2
+Enter a weight: 1
+Weight: 3
+Enter a weight: 5
+Weight: 4
+Enter a weight: 3
+Weight: 5
+Enter a weight: 2
+Weight: 6
+Enter a weight: 6
+weights assigned.
+
+weights -> {(1, 2, None): 4, (1, 4, None): 1, (1, 5, None): 5, (2, 3, None): 3, (3, 4, None): 2, (4, 5, None): 6}
+
+[ 3 -1  0 -1 -1]
+[-1  2 -1  0  0]
+[ 0 -1  2 -1  0]
+[-1  0 -1  3 -1]
+[-1  0  0 -1  2]
+#SpanningTs:  11
+Edge weights: [4, 1, 5, 3, 2, 6]
+Products of edge weights for each spanning tree: [180, 36, 30, 144, 240, 360, 120, 48, 72, 40, 60]
+Sum of the products: 1330
+
+Graph 2:
+Weight: 1
+Enter a weight: 2
+Weight: 2
+Enter a weight: 1
+Weight: 3
+Enter a weight: 3
+Weight: 4
+Enter a weight: 6
+Weight: 5
+Enter a weight: 5
+Weight: 6
+Enter a weight: 4
+weights assigned.
+
+weights -> {(1, 2, None): 2, (1, 4, None): 1, (1, 5, None): 3, (2, 3, None): 6, (3, 4, None): 5, (4, 5, None): 4}
+
+[ 3 -1  0 -1 -1]
+[-1  2 -1  0  0]
+[ 0 -1  2 -1  0]
+[-1  0 -1  3 -1]
+[-1  0  0 -1  2]
+#SpanningTs:  11
+Edge weights: [2, 1, 3, 6, 5, 4]
+Products of edge weights for each spanning tree: [360, 120, 90, 240, 120, 144, 180, 40, 48, 30, 36]
+Sum of the products: 1408
+
+~/week6_2024-10-08$ sage test2.sage
+Graph 1:
+Weight: 1
+Enter a weight: 1
+Weight: 2
+Enter a weight: 1
+Weight: 3
+Enter a weight: 1
+Weight: 4
+Enter a weight: 1
+Weight: 5
+Enter a weight: 1
+Weight: 6
+Enter a weight: 1
+weights assigned.
+
+weights -> {(1, 2, None): 1, (1, 5, None): 1, (2, 3, None): 1, (2, 4, None): 1, (3, 4, None): 1, (4, 5, None): 1}
+
+[ 2 -1  0  0 -1]
+[-1  3 -1 -1  0]
+[ 0 -1  2 -1  0]
+[ 0 -1 -1  3 -1]
+[-1  0  0 -1  2]
+#SpanningTs:  11
+Edge weights: [1, 1, 1, 1, 1, 1]
+Products of edge weights for each spanning tree: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Sum of the products: 11
+
+Graph 2:
+Weight: 1
+Enter a weight: 4
+Weight: 2
+Enter a weight: 5
+Weight: 3
+Enter a weight: 3
+Weight: 4
+Enter a weight: 1
+Weight: 5
+Enter a weight: 2
+Weight: 6
+Enter a weight: 6
+weights assigned.
+
+weights -> {(1, 2, None): 4, (1, 5, None): 5, (2, 3, None): 3, (2, 4, None): 1, (3, 4, None): 2, (4, 5, None): 6}
+
+[ 2 -1  0  0 -1]
+[-1  3 -1 -1  0]
+[ 0 -1  2 -1  0]
+[ 0 -1 -1  3 -1]
+[-1  0  0 -1  2]
+#SpanningTs:  11
+Edge weights: [4, 5, 3, 1, 2, 6]
+Products of edge weights for each spanning tree: [60, 180, 90, 48, 144, 72, 240, 40, 360, 120, 60]
+Sum of the products: 1414

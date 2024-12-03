@@ -1,0 +1,40 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\title{Paths, Cycles, and Complete Graphs}
+\author{Warvin Hassan}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% http://doc.sagemath.org/html/en/tutorial/sagetex.html
+% \usepackage{sagetex}
+
+% Enable PythonTeX to run Python – https://ctan.org/pkg/pythontex
+% \usepackage{pythontex}
+
+\begin{document}
+\maketitle
+I will be discussing and finding a general form for paths and cycles of a graph, as well as complete graphs.\\
+
+1. \textbf{Paths:} A path has 1 spanning tree and so the total value of the graph will be the product of all the weights. For example, a path with the set of weights $\{1,2,3\}$ would have a total value of $6$.\\
+
+2. \textbf{Cycles:} A cycle has $n$ spanning trees, where $n$ is the number of vertices/edges. We can find a spanning tree for a cycle by simply removing one edge $i.e.$, for any $C_{n}$ each spanning tree would have $n-1$ edges, where $n$ is the number of vertices and then we may precede to take the product of each spanning tree's edges and finally taking the sum of all the products once we have computed each spanning tree.\\
+
+For example a $C_{3}$ with weights $\{1,3,5\}$ would have the spanning trees $\{1,5\},\{3,5\},\{1,3\}$ and the product of each set would be $5,15,3$ respectively. Finally, the total value of the graph would be the sum of the products $5+15+3=23$.\\
+
+3. \textbf{Complete Graphs:} A complete graph has $n^{n-2}$ spanning trees, and this form is called Cayley's  formula. To find each spanning tree, one can treat it like a cycle and remove all edges until there are $n-1$ edges left for each spanning tree and $n$ is the number vertices. \\
+
+For example, a $K_{4}$ graph would have $3$ edges for each spanning tree with a total of $16$ trees. With assigned weights $\{1,2,3,4,5,6\}$ it would have the spanning trees $\{1,2,3\}, \{1,2,4\}, \{1,2,5\}, \{1,2,6\}, \{1,3,4\}, \{1,3,5\}, \{1,3,6\}, \{1,4,5\},$\\ $\{1,4,6\}, \{1,5,6\}, \{2,5,6\}, \{3,5,6\}, \{4,5,6\}, \{3,4,5\}, \{3,4,6\}, \{2,3,4\}$ and the sum of the products are $6 + 8 + 10 + 12 + 12 + 15 + 18 + 20 + 24 + 30 + 60 + 90 + 120 + 60 + 72 + 24 = 581$.
+
+\end{document}

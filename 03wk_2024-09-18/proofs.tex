@@ -1,0 +1,97 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref}
+\usepackage{amsmath,amsfonts,amssymb}
+%DEFINE THEREFORE FUNCTION
+\def\therefore{\boldsymbol{\text{ }
+\leavevmode
+\lower0.4ex\hbox{$\cdot$}
+\kern-.5em\raise0.7ex\hbox{$\cdot$}
+\kern-0.55em\lower0.4ex\hbox{$\cdot$}
+\thinspace\text{ }}}
+
+\title{Proofs for Paths, Cycles, and Complete Graphs}
+\author{Warvin Hassan}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% http://doc.sagemath.org/html/en/tutorial/sagetex.html
+% \usepackage{sagetex}
+
+% Enable PythonTeX to run Python – https://ctan.org/pkg/pythontex
+% \usepackage{pythontex}
+
+\begin{document}
+\maketitle
+The following three proofs will show that it does not matter how one assigns weights to paths, cycles, and complete graphs by proving that the total value of the respective graph remains the same.\\
+
+% PATHS
+\textbf{Paths:}
+Let $n\in\mathbb{Z}^{+}$, then a path $P_{n}$ on $n$ vertices has $n-1$ edges and is already a tree. It then follows, it has only one spanning tree, which is the path itself. Since the graph is trivially a tree the only spanning tree is the path itself, with the total graph value being the product of the weights of all the edges in the path $$TGV=w_{1}\cdot w_{2}\cdot\ldots\cdot w_{n-1}$$
+$\therefore$ $TGV$ is an integer by the commutative laws of integer multiplication and remains the same. $\blacksquare$\\
+
+% CYCLES
+\textbf{Cycles:}
+Let $n\in\mathbb{Z}^{+}$, then a cycle $C_{n}$ on $n$ vertices has $n$ edges, and its spanning trees are obtained by removing one edge $e_{i}$ from the cycle, leaving a path with $n-1$ edges. For each spanning tree, the spanning tree product is the product of the weights of the $n-1$ remaining edges, $i.e.$, for a distinct spanning tree the product is $w_{1}\cdot w_{2}\ldots \cdot w_{n-1}$. Then it follows, the total graph value is the sum of the $STP$s $$TGV=STP_{1}+STP_{2}+\ldots+STP_{n}$$
+$\therefore$ $TGV$ is an integer by commutative laws of integer multiplication and addition and remains the same. $\blacksquare$\\
+
+% COMPLETE GRAPHS
+\textbf{Complete Graphs:}
+Let $n\in\mathbb{Z}^{+}$, then a complete graph $K_{n}$ on $n$ vertices has 
+$\begin{pmatrix}
+n\\
+2
+\end{pmatrix}$
+edges, and the number of spanning trees is $n^{n-2}$ from Cayley's formula. Each spanning tree of $K_{n}$ is
+$\begin{pmatrix}
+n\\
+2
+\end{pmatrix}
+-
+\begin{pmatrix}
+n-1\\
+2
+\end{pmatrix}$
+edges and then note that\\ $(n-1)!=\frac{n!}{n},\,(n-2)!=\frac{n!}{n(n-1)},\,(n-3)!=\frac{n!}{n(n-1)(n-2)}$.\\
+% n choose 2
+So by definition
+\begin{align*}
+\begin{pmatrix}
+n\\
+2
+\end{pmatrix}&=\frac{n!}{2!(n-2)!}\\
+&=\frac{n!}{2!\frac{n!}{n(n-1)}}\\
+&=\frac{n(n-1)}{2}
+\end{align*} and
+% (n-1) choose 2
+\begin{align*}
+\begin{pmatrix}
+n-1\\
+2
+\end{pmatrix}&=\frac{(n-1)!}{2!(n-1-2)!}\\
+&=\frac{(n-1)!}{2!(n-3)!}\\
+&=\frac{\frac{n!}{n}}{2!\frac{n!}{n(n-1)(n-2)}}\\
+&=\frac{(n-1)(n-2)}{2}
+\end{align*}
+finally, we have that
+$\begin{pmatrix}
+n\\
+2
+\end{pmatrix}
+-
+\begin{pmatrix}
+n-1\\
+2
+\end{pmatrix}
+=\frac{n(n-1)}{2}-\frac{(n-1)(n-2)}{2}=n-1$.\\
+$\therefore$ it then follows from the previous proof on cycles that the TGV for complete graphs also is an integer under commutative laws of integer multiplication and addition and remains the same value. $\blacksquare$
+\end{document}

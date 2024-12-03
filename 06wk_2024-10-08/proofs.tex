@@ -1,0 +1,60 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\title{Proof that Best Distribution of Edge Weights for Maximization in $K_{n}$ \& Divided Cycles Stems from Longest Cycle}
+\author{Warvin Hassan}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% http://doc.sagemath.org/html/en/tutorial/sagetex.html
+% \usepackage{sagetex}
+
+% Enable PythonTeX to run Python – https://ctan.org/pkg/pythontex
+% \usepackage{pythontex}
+
+\begin{document}
+\maketitle
+%Given a complete graph $K_{n}$ with $n$ vertices and $_{n}C_{2}$ edges, each edge is assigned a distinct weight. Let the edge weights be $w_{1},w_{2},\hdots,w_{_{n}C_{2}}$, where $w_{1}>w_{2}>\hdots>w_{_{n}C_{2}}$. Our objective is to assign weights to the edges of the graph in such a way that the total weight of the Hamiltonian cycle is maximized.\\
+
+%Each spanning tree is a subgraph that connects all $n$ vertices with exactly $n-1$ edges and contains no cycles. To maximize the graph value, which depends on the products of the weights of edges in the spanning trees, it is essential to assign the largest weights to the edges that contribute most significantly to these spanning trees.\\ Since each spanning tree consists $n-1$ edges, the total number of spanning trees in $K_{n}$ is large, and the contribution of each spanning tree to the graph value is determined by the product of the weights of its edges.\\
+
+%The graph value is maximized when the largest weights are assigned to the edges that are most frequently used in the spanning trees. The edges that connect the vertices in a cycle, particularly the longest cycle (a Hamiltonian cycle in $K_{n})$, play a crucial role in forming the spanning trees.\\
+
+
+%Since a Hamiltonian cycle consists of exactly $n$ edges, to maximize its total weight, we assign the largest available edge weights to the edges of this cycle. Specifically, we assign $w_{1},w_{2},\hdots,w_{n}$ to the edges of the Hamiltonian cycle, where $w_{1}$ is the largest weight, $w_{2}$ is the second-largest, and so on, until $w_{n}$, which is the $n$-th largest weight.\\
+
+%The total weight of any cycle $C$ in the graph is the sum of the weights of the edges in that cycle, $W(C)=\sum_{e\in C}w_{e}$. Since the Hamiltonian cycle is the longest cycle in the graph and contains exactly $n$ edges, we aim to maximize $W_{cycle}=w_{1}+w_{2}+\hdots+w_{n}$. Any other cycle in the graph that is not a Hamiltonian cycle will contain fewer than $n$ edges. By assigning the largest $n$ edge weights to the Hamiltonian cycle, we ensure that the sum of edge weights for this cycle is maximized compared to any other cycle. If any of the largest weights $w_{1},w_{2},\hdots,w_{n}$ were assigned to edges outside the Hamiltonian cycle, the total weight of the cycle would decrease, because $W(C)=\sum_{e\in C}w_{e}$ would no longer include the largest weights. Instead, these weights would be assigned to edges in smaller cycles or paths, contradicting our goal of maximizing the Hamiltonian cycle's weight.\\
+
+%Therefore, to maximize the total weight of the Hamiltonian cycle, the largest $n$ weights must be assigned to the edges of this cycle. Any other distribution of weights results in a strictly smaller total weight for the Hamiltonian cycle. Thus, the largest possible total weight for any cycle in $K_{n}$ is achieved by assigning the largest $n$ weights to the edges of the Hamiltonian cycle. This demonstrates that distributing the largest weights to the longest cycle first is the key to maximizing the graph, specifically in terms of the weight of its longest cycle. $Q.E.D.$\\
+
+%Consider a cycle graph $C_{n}$ with $n$ vertices and an additional edge connecting two non-adjacent vertices. The edges are weighted with distinct weights $w_{1},w_{2},\hdots,w_{n+1}$ where $w_{1}>w_{2}>\hdots>w_{n+1}$. The product for each spanning tree will involve the weights of $n-1$ edges from the cycle. Therefore, the total contribution to the graph value from spanning trees formed by removing edges from the longest cycle depends on the weights assigned to the cycle's edges. To maximize the total graph value, it is essential to assign the largest available weights to the edges of the longest cycle. If the largest weights $w_{1},w_{2},\hdots,w_{n}$ are assigned to the cycle, the product of the edge weights for each spanning tree derived from the cycle will be maximized. This ensures that the contribution from these spanning trees to the graph value is as large as possible.\\
+
+%If smaller weights were assigned to the edges of the longest cycle, the products of edge weights for the spanning trees formed from this cycle would be smaller, reducing the contribution to the total graph value. Since the longest cycle provides the most spanning trees (by removing one edge at a time), its contribution is critical in determining the maximum graph value. Although edges outside the longest cycle also contribute to the spanning trees of the graph, their contribution is limited compared to that of the longest cycle. Spanning trees that involve the longest cycle inherently include more edges from the cycle and are more numerous, meaning that maximizing the weight of the cycle’s edges leads to a higher total graph value.\\
+
+%Our goal is to assign weights to the edges of this graph such that the total weight of the longest cycle is maximized. The longest cycle in this graph consists of exactly $n$ edges from the original cycle $C_{n}$, since the addition of one extra edge does not change the length of the longest cycle, which remains the original cycle through all $n$ vertices. To maximize the total weight of this cycle, we assign the largest $n$ available weights to the edges of the cycle. Therefore, we assign $w_{1}>w_{2}>\hdots>w_{n}$ to the $n$ edges in the cycle, ensuring that the total weight of this cycle is as large as possible. The additional edge $n$ creates smaller cycles, but none of these cycles contain all vertices. The extra edge can form a cycle with at most $n-1$ edges from the original cycle, plus itself, for a total of $n$ edges. However, these smaller cycles cannot exceed the weight of the original cycle, since the largest weights have already been assigned to the longest cycle. The smallest available weight $w_{n+1}$ is assigned to the extra edge, minimizing its contribution to any shorter cycle.\\
+
+%Since the longest cycle in the graph is the original cycle, and the largest $n$ weights are assigned to the edges of this cycle, the total weight of the longest cycle is maximized. Any alternative weight assignment would result in a smaller total weight for the longest cycle, as the largest weights would be distributed to shorter cycles, reducing the weight of the original cycle. Thus, assigning the largest $n$ weights to the edges of the longest cycle ensures that the total weight of the longest cycle is maximized. The extra edge, forming shorter cycles, plays a minimal role in this maximization. Therefore, distributing the largest weights to the longest cycle first is key to maximizing the total weight of the graph’s longest cycle. $Q.E.D.$
+
+We begin by defining $K_{n}$ as a complete graph with $n$ vertices. The number of edges in $K_{n}$ is given by $_{n}C_{2}$. We denote the edges of $K_{n}$ as $e_{1},e_{2},\hdots,e_{m}$ where $m=\,_{n}C_{2}$. The weights assigned to these edges are $w(e_{1}),w(e_{2}),\hdots,w(e_{m})$, with the assumption that $w(e_{1})>w(e_{2})>\hdots>w(e_{m})$. The total graph value $V(K_{n})$ is defined as the sum of the products of the weights of the edges across all spanning trees of $K_{n}$. According to Cayley’s formula, the number of spanning trees in $K_{n}$ is $n^{n-2}$. Each spanning tree consists of $n-1$ edges. To analyze the contribution of a specific edge $e_{i}$ to the total graph value, we express this contribution as $C_{i}=w(e_{i})* T_{i}$ where, $T_{i}$ is the number of spanning trees that include the edge $e_{i}$. When an edge $e_{i}$ is included in a spanning tree, the remaining $n-2$ vertices can be obtained by any spanning tree formed from the remaining $n-1$ vertices. Therefore, the number of spanning trees that include edge $e_{i}$ is given by $T_{i}=n^{n-3}$. This leads to the conclusion that the total contribution to the graph value from all edges can be expressed as: 
+$$V(K_{n})=\sum_{i=1}^{m}C_{i}=\sum_{i=1}^{m}w(e_{i})*n^{n-3}$$
+To maximize $V(K_{n})$, we need to maximize the sum. If the largest weights are assigned to the edges that form the longest cycle in $K_{n}$, then these edges will appear in a larger number of spanning trees, thus increasing their overall contribution to $V(K_{n})$. In $K_{n}$, the longest cycle is a Hamiltonian cycle that includes all $n$ vertices. If the weights of the edges in the Hamiltonian cycle are the largest, each time a spanning tree is formed by including an edge from this cycle, it will significantly contribute to the total value. Given the multitude of spanning trees possible in $K_{n}$, the overall contribution from the edges of the longest cycle will dominate the total graph value. Consequently, by placing the largest weights on the edges of the longest cycle in $K_{n}$, we ensure that these edges contribute maximally to the total graph value since they will appear in a larger number of spanning trees. $\textbf{Q.E.D.}$\\
+
+We define the graph $G$ as consisting of a cycle $C_{n}$ with $n$ vertices and an additonal edge $e_{n+1}$ that connects two non-adjacent vertices within the cycle.\\
+
+The edges of $G$ can be denoted as $e_{1},e_{2},\hdots,e_{n}$ for the edges of the cycle, and $e_{n+1}$ for the extra edge. We assign weights to these edges as $w(e_{1}),w(e_{2}),\hdots,w(e_{n}),w(e_{n+1})$, where we assume $w(e_{1})\geq w(e_{2})\geq \hdots\geq w(e_{n})\geq w(e_{n+1})$. The total graph value $V(G)$ s defined as the sum of the products of the weights of the edges across all spanning trees of $G$. A spanning tree consists of $n$ vertices and $n-1$ edges. To analyze the contribution of each edge to the total graph value, consider first the spanning trees that do not include the extra edge. When a spanning tree is formed by removing one edge from the cycle $C_{n}$, the edge $e_{n+1}$ can be included. The contribution of each spanning tree that includes $e_{n+1}$ can be expressed as $C_{e_{n+1}}=w(e_{n+1})* T_{e_{n+1}}$, where $ T_{e_{n+1}}$ is the number of spanning trees that include the edge $e_{n+1}$. For each edge $e_{i}$ of the cycle that is removed, we form a spanning tree that includes $e_{n+1}$. Next, we consider the spanning trees that include each edge $e_{i}$ of the cycle. The contribution from these edges can be expressed as $C_{i}=w(e_{i})*T_{i}$, where $T_{i}$ is the number of spanning trees that include edge $e_{i}$. Each edge can be included in $T_{i}=n^{n-3}$ spanning trees. The total contribution to the graph value from all edges can then be expressed as:
+
+$$V(G)=\sum_{i=1}^{n}C_{i}+C_{e_{n+1}}=\sum_{i=1}^{n}w(e_{i})*n^{n-3}+w(e_{n+1})*T_{e_{n+1}}$$.
+To maximize $V(G)$, we need to maximize the expression $\sum_{i=1}^{n}w(e_{i})+w(e_{n+1})$. The optimal assignment of weights occurs when the largest weights are placed on the edges of the cycle $C_{n}$ while assigning the smallest weight to the extra edge $e_{n+1}$. This ensures that the edges of the cycle contribute maximally to the total graph value because they will appear in a greater number of spanning trees compared to the extra edge. $\textbf{Q.E.D.}$
+
+\end{document}

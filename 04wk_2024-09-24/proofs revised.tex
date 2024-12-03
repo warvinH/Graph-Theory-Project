@@ -1,0 +1,36 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\title{Proofs for Cycles and Complete Graphs}
+\author{Warvin Hassan}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% http://doc.sagemath.org/html/en/tutorial/sagetex.html
+% \usepackage{sagetex}
+
+% Enable PythonTeX to run Python – https://ctan.org/pkg/pythontex
+% \usepackage{pythontex}
+
+\begin{document}
+\maketitle
+Let the two weighted $n$-cycles be denoted as $C_{1}$ and $C_{2}$. The Edges of $C_{1}$ can be represented as $E_{1}=\{e_{1},e_{2},\ldots,e_{n}\}$ and the edges of $C_{2}$ as $E_{2}=\{f_{1},f_{2},\ldots,f_{n}\}$. The weights assigned to the edges of both $C_{1}$ and $C_{2}$ are derived from the same set $W=\{w_{1},w_{2}\ldots,w_{n}\}$ and are assigned randomly; $i.e.,$ for some weight $w_{n}=e_{a}$ and $w_{n}=f_{b}$ where $a,b \le n$. We will define a mapping $m:E_{1}\rightarrow E_{2}$ such that $m(e_{i})=f_{i}$ for $i=1,2,\ldots,n$. To demonstrate that this mapping is a bjection, we must show that it is both injective and surjective. To establish injectivity, suppose there exist indices $i$ and $j$ such that $m(e_{i})=m(e_{j})$. This implies that $f_{i}=f_{j}$. Since the edges $f_{i}$ and $f_{j}$ correspond to distinct connections in the cycle $C_{2}$, we must have $i=j$. Therefore, the mapping $m$ is injective. Next, to show surjectivity, consider any edge $f_{k}\in E_{2}$. There exists an edge $e_{k}\in E_{1}$ such that $m(e_{k})=f_{k}$. This mapping ensures that every edge in $E_{2}$ is accounted for by at least one edge in $E_{1}$, thus satisfying the surjectivity condition. Having established that $m$ is both injective and surjective, we conclude that $m$ is a bijection. This one-to-one correspondence between the edges of $C_{1}$ and $C_{2}$ is independent of the order in which the weights are assigned to the edges. onsequently, since the edges are matched in a bijective manner, the sum of the products of the weights associated with spanning trees of $C_{1}$ and $C_{2}$ remains invariant under the assignments of weights. Thus, the total graph values for both cycles are equal: $$TGV(C_{1})=TGV(C_{2}).$$Q.E.D.\\
+
+Let the two weighted $n$-complete graphs be denoted $K_{1}$ and $K_{2}$. The edges of $K_{1}$ can be represented as $E_{1}=\{e_{ij}|1\leq i<j\leq n\}$, and the edges of $K_{2}$ as $E_{2}=\{f_{ij}|1\leq i<j\leq n\}$. The weights assigned to the edges of both $K_{1}$ and $K_{2}$ are derived from the same set $W=\{w_{1},w_{2},\ldots,w_{n}\}$, where $m=\frac{n(n-1)}{2}$ represents the total number of edges in a complete graph. We will define a mapping $p:E_{1}\rightarrow E_{2}$ such that $p(e_{ij})=f_{ij}$ for each edge in $E_{1}$ corresponding to the edge $f_{ij}$ in $E_{2}$. To demonstrate that this mapping is a bijection, we must show that it is both injective and surjective. To establish injectivity, suppose there exist indices $(i,j)$ and $(k,l)$ such that $p(e_{ij})=p(e_{kl})$. This implies that $f_{ij}=f_{kl}$. Since the edges $f_{ij}$ and $f_{kl}$ correspond to distinct pairs of vertices in the complete graph $K_{2}$, it must follow that $(i,j)=(k,l)$. Therefore, the mapping $p$ is injective. Next, to show surjectivity, consider any edge $f_{kl}\in E_{2}$. There exists an edge $e_{kl}\in E_{1}$ such that $p(e_{kl}=f_{kl})$. This mapping ensures that every edge in $E_{2}$ is account for by at least one edge in $E_{1}$, thus satisfying the surjectivity condition. Having established that $p$ is both injective and surjective, we conclude that $p$ is a bijection. This one-to-one correspondence between the edges of $K_{1}$ and $K_{2}$ is independent of the order in which the weights are assigned to the edges. Consequently, since the edges are matched in a bijective manner, the sum of the products of the weights associated with spanning trees of $K_{1}$ and $K_{2}$ remains invariant under the assignment of weights. Thus, the total graph values for both complete graphs are equal: $$TGV(K_{1})=TGV(K_{2}).$$
+Q.E.D.
+
+
+
+
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Proof of Maximum Graph Value for a Divided Cycle}
+\author{Warvin Hassan}
+\date{}
+\maketitle
+
+\section*{Proof}
+
+Let \( G = C_n + e \) be a graph formed by adding an extra edge \( e \) to an \( n \)-cycle \( C_n \). This additional edge \( e \) connects two non-adjacent vertices in \( C_n \), thereby creating a "divided cycle." Assign weights \( w_1, w_2, \ldots, w_n \) to the edges of \( C_n \) and a weight \( w_{e} \) to the additional edge \( e \). Our goal is to show that the maximum graph value \( V(G) \), which is the sum of the products of the edge weights across all spanning trees of \( G \), is achieved when the smallest weight is assigned to \( e \), with the remaining weights distributed among the edges of \( C_n \).
+
+The graph value \( V(G) \) is defined as
+\[
+V(G) = \sum_{T \in \mathcal{T}(G)} \prod_{e \in T} w(e),
+\]
+where \( \mathcal{T}(G) \) denotes the set of all spanning trees in \( G \) and \( w(e) \) represents the weight of edge \( e \).
+
+To calculate \( V(G) \), we consider two types of spanning trees in \( G \): those that include the extra edge \( e \) and those that exclude it. If a spanning tree includes \( e \), it will consist of \( e \) and \( n - 1 \) additional edges chosen from \( C_n \) to span all vertices. If a spanning tree excludes \( e \), it must be formed entirely from the edges in \( C_n \), which results in a spanning tree that is equivalent to a spanning tree of \( C_n \) itself.
+
+We first calculate the number of spanning trees in each case. For the cycle \( C_n \), there are exactly \( n \) spanning trees, as each spanning tree of a cycle graph is formed by removing one of the \( n \) edges in \( C_n \). In \( G \), we have two types of spanning trees: those that include \( e \), of which there are \( n - 1 \), and those that exclude \( e \), of which there are \( n \). Therefore, \( G \) has a total of \( 2n - 1 \) spanning trees, with \( n \) spanning trees that exclude \( e \) and \( n - 1 \) spanning trees that include \( e \). Consequently, spanning trees that exclude \( e \) form the majority of spanning trees in \( G \).
+
+Next, we analyze the effect of weight assignment on the graph value \( V(G) \). Consider the configuration where the smallest weight \( w_{\min} \) is assigned to \( e \), while the remaining, larger weights \( w_1, w_2, \ldots, w_n \) are assigned to the edges of \( C_n \). We now evaluate the contributions to \( V(G) \) from the two cases of spanning trees under this weight assignment.
+
+For spanning trees that include \( e \), each tree’s contribution to the graph value will contain the term \( w_{\min} \) due to the inclusion of \( e \), resulting in a product of the form \( w_{\min} \prod_{i=1}^{n-2} w(e_i) \), where the product is taken over the \( n - 2 \) edges chosen from the \( n-1 \) edges of \( C_n \). Therefore, the total contribution from spanning trees that include \( e \) is
+\[
+\sum_{T \in \mathcal{T}_1} w_{\min} \prod_{e \in T \setminus \{e\}} w(e),
+\]
+where \( \mathcal{T}_1 \) is the set of spanning trees in \( G \) that include \( e \). Since \( w_{\min} \) is small, this contribution is minimized.
+
+For spanning trees that exclude \( e \), each tree consists solely of edges from \( C_n \), and hence each tree’s product is of the form \( \prod_{e \in T} w(e) \), where \( T \) is a spanning tree of \( C_n \). The total contribution from these spanning trees is
+\[
+\sum_{T \in \mathcal{T}_2} \prod_{e \in T} w(e),
+\]
+where \( \mathcal{T}_2 \) denotes the set of spanning trees in \( C_n \). This contribution is maximized by placing the larger weights on the edges of \( C_n \), as each product \( \prod_{e \in T} w(e) \) will be maximized when the weights are higher.
+
+Since the majority of the spanning trees in \( G \) are those that exclude \( e \) (namely, \( n \) out of \( 2n - 1 \)), their contribution has a larger impact on the total graph value \( V(G) \) than the contribution from the fewer spanning trees that include \( e \). By assigning the smallest weight to \( e \), we minimize the terms where \( e \) is present and allow the majority of spanning trees (those of \( C_n \)) to contribute maximally to the graph value by utilizing the larger weights.
+
+Therefore, the maximum graph value \( V(G) \) is achieved by assigning the smallest weight to the extra edge \( e \) while placing the remaining weights on the edges of the cycle \( C_n \).
+
+\(\square\)
+
+\end{document}
